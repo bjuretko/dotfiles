@@ -1,0 +1,78 @@
+[user]
+	name = Name
+	email = name@example.com
+[commit]
+	template = /.stCommitMsg
+
+[alias]
+  b = branch -v
+  bd = branch -d
+  bD = branch -D
+  br = branch
+  ci = commit
+  cim = commit -m
+  cima = commit -am
+  clr = rm -r --cached
+  co = checkout
+  cp = cherry-pick -x
+  d = diff -w
+  dc = diff --cached
+  nb = checkout -b
+  lg = log --graph --date=relative --pretty=tformat:'%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%an %ad)%Creset' -20
+  oups = commit --amend --no-edit
+  r = remote -v
+  rh = reset --hard
+  st = status -sb
+  t = tag -l
+  unstage = reset HEAD
+  uncommit = reset --soft HEAD^
+[color "branch"]
+  remote = cyan
+  upstream = cyan
+[core]
+  autocrlf = false
+  editor = nano
+  excludesfile = ~/.gitignore_global
+  pager = cat
+  untrackedCache = true
+  whitespace = -trailing-space
+[credential]
+  helper = cache --timeout= 3600  # save cache for 1h
+[diff]
+  mnemonicPrefix = true
+  renames = true
+  tool = vimdiff
+  submodule = log
+  wordRegex = .
+[difftool]
+  prompt = false
+[fetch]
+  recurseSubmodules = on-demand
+[grep]
+  extendedRegexp = true
+[help]
+  autocorrect = 10
+[log]
+  abbrevCommit = true
+  follow = true
+[mergetool]
+  keepBackup = false
+  keepTemporaries = false
+  prompt = false
+  writeToTemp = true
+[pull]
+  rebase = preserve
+[push]
+  default = simple
+  followTags = true
+[rebase]
+  # autoSquash = true
+[rerere]
+  autoupdate = true
+  enabled = true
+[status]
+  showUntrackedFiles = all
+  submoduleSummary = true
+[tag]
+  sort = version:refname
+
