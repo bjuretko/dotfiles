@@ -29,7 +29,7 @@ export PATH="/usr/local/opt/ruby/bin:$PATH"
 export PATH="/Users/benedict/miniconda3/bin:$PATH"
 
 # local binaries
-export PATH="$HOME/bin:$HOME/.local/bin:$PATH"
+export PATH="$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH"
 
 
 # If not running interactively, don't do anything
