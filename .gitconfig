@@ -1,6 +1,6 @@
 [user]
-	name = Name
-	email = name@example.com
+	name = Benedict Juretko
+	email = benedict.juretko@gmail.com
 [commit]
 	template = /.stCommitMsg
 
@@ -32,7 +32,7 @@
 [core]
   autocrlf = false
   editor = nano
-  excludesfile = ~/.gitignore_global
+	excludesfile = /Users/benedict/.gitignore_global
   pager = cat
   untrackedCache = true
   whitespace = -trailing-space
@@ -75,4 +75,3 @@
   submoduleSummary = true
 [tag]
   sort = version:refname
-
