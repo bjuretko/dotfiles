@@ -20,66 +20,30 @@ brew install $(cat ./homebrew/list)
 brew cask install $(cat ./homebrew/cask.list)
 ```
 
-TODO: Packages below should go into the lists
-
-
-# browser
-```
-brew cask install google-chrome
-brew cask install google-chrome-canary
-brew cask install firefox
-brew cask install firefox-beta
-```
-
-# development
+## create lists
 
 ```
-brew cask install sublime-text
-brew cask install iterm2
-brew cask install sourcetree
-brew cask install parallels-desktop
+brew list > homebrew/list
+brew cask list > homebrew/cask.list
 ```
 
-## vscode
+# parallels
 
-```
-brew cask install visual-studio-code
-```
+brew cask install parallels-desktop@13.3.2
+
+# vscode
 
 > Install extension [Settings Sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync) and sync settings and extensions stored in github gist.
 
-## docker
+# docker
 
 ```
 brew install docker docker-compose docker-machine
 ```
 > Use [machine-share](https://www.npmjs.com/package/machine-share) to import / export docker-machine configs
 
-## bitbar
-
 ```
-brew cask install bitbar
-```
-
-# other
-
-```
-brew cask install cheatsheet
-brew cask install spectacle
-brew cask install itsycal
-brew cask install skitch
-brew cask install the-unarchiver
-brew cask install slack
-brew cask install gas-mask
-
-brew install caskformula/caskformula/inkscape
-brew cask install gimp
-
-brew cask install spotify
-
-brew cask install skype
-brew cask install skype-for-business
-brew install keybase
+npm i -g machine-share
 ```
 
 # Apple App Store
@@ -91,12 +55,16 @@ brew install mas
 ```
 
 ```bash
-mas install 937984704 # Amphetamine
-mas install 497799835 # Xcode
-mas install 472226235 # LanScan
+mas install 937984704  # Amphetamine
+mas install 497799835  # Xcode
+mas install 472226235  # LanScan
 mas install 1180461298 # cpuinfo
+mas install 425424353  # The Unarchiver
+mas install 638161122  # YubiKey Personalization Tool
+mas install 1039633667 # Irvue
+mas install 1415866782 # CoffeeCup
+mas install 1333542190 # 1Password 7
 ```
-
 
 ## NightOwl
 

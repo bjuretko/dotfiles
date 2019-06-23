@@ -50,3 +50,7 @@ xz
 yarn
 ykman
 ykpers
+docker
+docker-compose
+docker-machine
+keybase
