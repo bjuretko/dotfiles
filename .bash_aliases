@@ -1,7 +1,7 @@
 # Docker
 alias dm="docker-machine"
 alias dc="docker-compose"
-alias dstop="docker stop $(docker ps -q)"
+alias dstop="docker ps -q | xargs -I {} docker stop {}"
 alias dclogs="docker-compose logs"
 alias dockly="docker run -it -v /var/run/docker.sock:/var/run/docker.sock lirantal/dockly"
 
@@ -37,4 +37,8 @@ getkeychainpassword() {
 # execute a command on all running docker machines
 execdmall() {
   docker-machine ls -q --filter "state=Running" | xargs -I {} docker-machine ssh {} $1
+}
+
+checkssl() {
+  openssl s_client -showcerts -connect $1:443
 }
