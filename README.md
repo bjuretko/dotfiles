@@ -2,6 +2,10 @@
 
 Dotfiles and initial setup of my mac.
 
+Shortcut for initial setup
+1. checkout this repos
+2. call `./setup.sh`
+
 # homebrew
 
 install according to https://brew.sh
@@ -10,6 +14,7 @@ install according to https://brew.sh
 brew tap caskroom/cask
 brew tap caskroom/versions
 brew tap buo/cask-upgrade
+brew tap homebrew/cask-fonts 
 brew cask
 ```
 
