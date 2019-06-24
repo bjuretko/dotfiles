@@ -41,14 +41,10 @@ if ! shopt -oq posix; then
   [ -f /Applications/Docker.app/Contents/Resources/etc/docker-compose.bash-completion ] && . /Applications/Docker.app/Contents/Resources/etc/docker-compose.bash-completion
 fi
 
-# gopass bash completion
-source <(gopass completion bash)
-
 ## Python env
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 eval "$(pipenv --completion)"
-
 
 ## HSTR
 #export HSTR_CONFIG=raw-history-view
