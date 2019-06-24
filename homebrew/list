@@ -1,12 +1,9 @@
-
 azure-cli
 bash
 bash-completion@2
 bash-git-prompt
-cf-cli
 coreutils
 curl
-delve
 dep
 git
 git-lfs
@@ -53,4 +50,3 @@ ykpers
 docker
 docker-compose
 docker-machine
-keybase
