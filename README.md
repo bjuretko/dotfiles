@@ -11,10 +11,11 @@ Shortcut for initial setup
 install according to https://brew.sh
 
 ```
+brew analytics off
 brew tap caskroom/cask
 brew tap caskroom/versions
 brew tap buo/cask-upgrade
-brew tap homebrew/cask-fonts 
+brew tap homebrew/cask-fonts
 brew cask
 ```
 
@@ -32,10 +33,6 @@ brew list > homebrew/list
 brew cask list > homebrew/cask.list
 ```
 
-# parallels
-
-brew cask install parallels-desktop@13.3.2
-
 # vscode
 
 > Install extension [Settings Sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync) and sync settings and extensions stored in github gist.
@@ -43,7 +40,8 @@ brew cask install parallels-desktop@13.3.2
 # docker
 
 ```
-brew install docker docker-compose docker-machine
+brew cask install docker
+brew install docker-compose docker-machine
 ```
 > Use [machine-share](https://www.npmjs.com/package/machine-share) to import / export docker-machine configs
 
