@@ -1,0 +1,23 @@
+[ "$DEBUG" ] && echo "sourcing ~/.bash_completion"
+
+## Bash-Completions
+for completion_file in $(brew --prefix)/etc/bash_completion.d/*; do
+  [ "$DEBUG" ] && echo "sourcing $completion_file..."
+  source "$completion_file"
+done
+
+
+[ "$DEBUG" ] && echo "Sourcing docker completions ..."
+# https://docs.docker.com/docker-for-mac/#install-shell-completion
+if ! shopt -oq posix; then
+  [ -f /Applications/Docker.app/Contents/Resources/etc/docker.bash-completion ] && . /Applications/Docker.app/Contents/Resources/etc/docker.bash-completion
+  [ -f /Applications/Docker.app/Contents/Resources/etc/docker-machine.bash-completion ] && . /Applications/Docker.app/Contents/Resources/etc/docker-machine.bash-completion
+  [ -f /Applications/Docker.app/Contents/Resources/etc/docker-compose.bash-completion ] && . /Applications/Docker.app/Contents/Resources/etc/docker-compose.bash-completion
+fi
+
+
+## Python env
+[ "$DEBUG" ] && echo "Sourcing python completions ..."
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+eval "$(pipenv --completion)"
