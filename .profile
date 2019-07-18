@@ -22,7 +22,7 @@ shopt -s checkwinsize
 
 # if running bash
 if [ -n "$BASH_VERSION" ]; then
-  DEBUG="1"
+  # DEBUG="1"
 
   # include .bashrc if it exists
   if [ -f "$HOME/.bashrc" ]; then
