@@ -61,7 +61,7 @@
   prompt = false
   writeToTemp = true
 [pull]
-  rebase = preserve
+  rebase = merges
 [push]
   default = simple
   followTags = true
