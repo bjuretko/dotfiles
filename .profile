@@ -8,6 +8,28 @@
 #umask 022
 # use bash -l in shell to reload changes made in this file
 
+export LC_ALL=C
+# set PATH so it includes user's private bin directories
+
+# Python
+export PATH="$PATH:~/Library/Python/2.7/bin"
+
+# Go
+export GOPATH="$HOME/.go"
+export GOROOT="$(brew --prefix golang)/libexec"
+export PATH="$PATH:$GOPATH/bin:$GOROOT/bin"
+
+# Rust
+export PATH="$PATH:$HOME/.cargo/bin"
+
+# Ruby
+export PATH="/usr/local/opt/ruby/bin:$PATH"
+
+# Miniconda3
+export PATH="$HOME/miniconda3/bin:$PATH"
+
+# local binaries
+export PATH="$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH"
 
 
 # If not running interactively, don't do anything
@@ -37,13 +59,6 @@ if [ -n "$BASH_VERSION" ]; then
   if [ -f ~/.bash_aliases ]; then
     [ "$DEBUG" ] && echo "sourcing .bash_aliases..."
     . ~/.bash_aliases
-  fi
-
-  # https://github.com/magicmonty/bash-git-prompt
-  if [ -f "/usr/local/opt/bash-git-prompt/share/gitprompt.sh" ]; then
-    [ "$DEBUG" ] && echo "sourcing git-prompt..."
-    __GIT_PROMPT_DIR="/usr/local/opt/bash-git-prompt/share"
-    source "/usr/local/opt/bash-git-prompt/share/gitprompt.sh"
   fi
 
   # brew install bash-completion@2 for bash4
