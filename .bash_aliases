@@ -1,6 +1,8 @@
 # Docker
 alias dm="docker-machine"
 alias dc="docker-compose"
+alias dcdown="docker-compose down --rmi all -v"
+alias dcup="docker-compose up"
 alias dstop="docker ps -q | xargs -I {} docker stop {}"
 alias dclogs="docker-compose logs"
 alias dockly="docker run -it -v /var/run/docker.sock:/var/run/docker.sock lirantal/dockly"
@@ -20,7 +22,7 @@ alias az_vm_list="az vm list -d"
 
 # Try to get subdomains of a domain using certificate transparency database
 subdomains() {
-  curl -s -q "https://crt.sh/?q=%.$1&output=json" |  jq -a -M -r '.name_value' | xargs -n 1 host | sort -u
+  curl -s -q "https://crt.sh/?q=%.$1&output=json" | jq -M -r '.[].name_value' | sort | uniq
 }
 
 

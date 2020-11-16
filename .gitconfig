@@ -1,8 +1,8 @@
 [user]
-	name = Benedict Juretko
-	email = benedict.juretko@gmail.com
+  name = Benedict Juretko
+  email = benedict.juretko@gmail.com
 [commit]
-	template = /.stCommitMsg
+  template = /.stCommitMsg
 
 [alias]
   b = branch -v
@@ -19,20 +19,21 @@
   dc = diff --cached
   nb = checkout -b
   lg = log --graph --date=relative --pretty=tformat:'%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%an %ad)%Creset' -20
-  oups = commit --amend --no-edit
+  oops = commit --amend --no-edit
   r = remote -v
   rh = reset --hard
   st = status -sb
   t = tag -l
   unstage = reset HEAD
   uncommit = reset --soft HEAD^
+  p = push -o ci.skip
 [color "branch"]
   remote = cyan
   upstream = cyan
 [core]
   autocrlf = false
   editor = nano
-	excludesfile = /Users/benedict/.gitignore_global
+  excludesfile = ~/.gitignore_global
   pager = cat
   untrackedCache = true
   whitespace = -trailing-space
@@ -62,6 +63,7 @@
   writeToTemp = true
 [pull]
   rebase = merges
+  autostash = true
 [push]
   default = simple
   followTags = true
