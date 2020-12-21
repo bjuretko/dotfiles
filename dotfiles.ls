@@ -5,3 +5,4 @@
 .gitignore_global
 .profile
 .stCommitMsg
+.config/starship.toml
