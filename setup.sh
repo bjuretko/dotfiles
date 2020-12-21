@@ -1,11 +1,11 @@
 #!/bin/sh
 
 echo 🔗 Symlinking dotfiles ...
-cat dotfiles.ls | xargs -I {} ln -sfv `pwd`/{} ~/{}
+xargs -I {} ln -sfv "$(pwd)/{}" ~/{} < dotfiles.ls
 
 echo 🍻 Homebrewing ...
 echo
-
+brew analytics off
 brew tap caskroom/cask
 brew tap caskroom/versions
 brew tap buo/cask-upgrade
