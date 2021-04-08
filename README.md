@@ -4,35 +4,47 @@ Dotfiles and initial setup of my Mac.
 
 Shortcut for initial setup:
 
-1. checkout this repository
-2. call `./setup.sh`
+1. Clone this repository
+2. 🍻 Install [homebrew](https://brew.sh) as described [here](https://docs.brew.sh/Installation) and execute
 
-This will install [homebrew](https://brew.sh) and common used packages.
+   ```sh
+   brew analytics off
+   ```
 
-For re-install:
+   afterwards.
 
-```sh
-brew install $(cat ./homebrew/list)
-brew cask install $(cat ./homebrew/cask.list)
-```
+3. Install applications ...
+
+   ```sh
+   brew bundle
+   ```
+
+   This will install  and common used packages.
+
+4. 🔗 Symlink dotfiles with
+
+   ```sh
+   xargs -I {} ln -sfv "$(pwd)/{}" ~/{} < dotfiles.ls
+   ```
 
 ## Update homebrew package lists
 
-Check for installed taps with `brew tap-info --installed` and add them manually
-to `setup.sh`. 
+In the root directory of this project, update the Brewfile with
 
 ```sh
-brew list --formula > homebrew/list
-brew list --cask > homebrew/cask.list
+brew bundle dump --describe -f
 ```
 
-## vscode
+You can cleanup other dependencies which are not in Brewfile with `brew bundle cleanup`
+
+
+## Visual Studio Code
 
 Install extension [Settings Sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync) and sync settings and extensions stored in github gist, not using VS Code's included sync mechanism.
 
-## docker
+## Docker and Kubernetes
 
-Docker is installed via homebrew and includes docker-compose and docker-machine.
+Docker and Kubernetes Tools are installed via homebrew and includes docker-compose and docker-machine. Use Brewfile.oci to install the standard tools.
 To import (export) docker machines configurations
 use [machine-share](https://www.npmjs.com/package/machine-share).
 
@@ -40,22 +52,9 @@ use [machine-share](https://www.npmjs.com/package/machine-share).
 npm i -g machine-share
 ```
 
-## Apple App Store
+## Mac App Store
 
-Installation of native Mac Apps can be automated with [MacAppStore](http://macappstore.org/)
+Installation of native Mac Apps can be automated with [MacAppStore](http://macappstore.org/). The mas installed apps are included in the Brewfile as well.
 
-```sh
-brew install mas
-```
-
-```bash
-mas install 937984704  # Amphetamine
-mas install 497799835  # Xcode
-mas install 472226235  # LanScan
-mas install 1180461298 # cpuinfo
-mas install 425424353  # The Unarchiver
-mas install 638161122  # YubiKey Personalization Tool
-mas install 1039633667 # Irvue
-mas install 1415866782 # CoffeeCup
-mas install 1333542190 # 1Password 7
-```
+Get a list of installed apps with `mas list`. 
+To manage apps with mas you need to signin with `mas signin`.
