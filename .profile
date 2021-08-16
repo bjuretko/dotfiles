@@ -28,6 +28,11 @@ export PATH="/usr/local/opt/ruby/bin:$PATH"
 # Miniconda3
 export PATH="$HOME/miniconda3/bin:$PATH"
 
+# nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"
+[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"
+
 # local binaries
 export PATH="$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH"
 
