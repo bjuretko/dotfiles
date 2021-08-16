@@ -96,7 +96,7 @@ echo "$GIT_REMOTE_SYMBOL "
 """
 when = 'git rev-parse --is-inside-work-tree 2> /dev/null'
 format = "at $output  "
-hell = ["bash", "--noprofile", "--norc"]
+shell = ["bash", "--noprofile", "--norc"]
 
 ### Disabled modules ###########################################################
 
@@ -118,13 +118,13 @@ disabled = true
 [dart]
 disabled = true
 
-[docker]
-disabled = true
+[docker_context]
+disabled = false
 
 [dotnet]
 disabled = true
 
-[exlixir]
+[elixir]
 disabled = true
 
 [elm]
