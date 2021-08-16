@@ -26,6 +26,7 @@ Shortcut for initial setup:
    ```sh
    xargs -I {} ln -sfv "$(pwd)/{}" ~/{} < dotfiles.ls
    ```
+   TODO: reorganize repository for usw with [GNU Stow](https://www.gnu.org/software/stow/manual/stow.html).
 
 ## Update homebrew package lists
 
