@@ -8,6 +8,8 @@
 #umask 022
 # use bash -l in shell to reload changes made in this file
 
+echo "$HOME/.profile"
+
 export LC_ALL=C
 # set PATH so it includes user's private bin directories
 
@@ -52,10 +54,10 @@ if [ -n "$BASH_VERSION" ]; then
   # DEBUG="1"
 
   # include .bashrc if it exists
-  if [ -f "$HOME/.bashrc" ]; then
-    [ "$DEBUG" ] && echo "sourcing .bashrc..."
-    . "$HOME/.bashrc"
-  fi
+  #if [ -f "$HOME/.bashrc" ]; then
+  #  [ "$DEBUG" ] && echo "sourcing .bashrc..."
+  #  . "$HOME/.bashrc"
+  #fi
 
   # Alias definitions.
   # You may want to put all your additions into a separate file like
@@ -89,7 +91,6 @@ shopt -s histappend
 #export HSTR_CONFIG=favorites-view
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 export HSTR_CONFIG=hicolor       # get more colors
-shopt -s histappend              # append new history items to .bash_history
 export HISTCONTROL=ignorespace   # leading space hides commands from history
 export HISTFILESIZE=10000        # increase history file size (default is 500)
 export HISTSIZE=${HISTFILESIZE}  # increase history size (default is 500)
