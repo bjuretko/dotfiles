@@ -62,12 +62,13 @@
   prompt = false
   writeToTemp = true
 [pull]
-  rebase = merges
+	rebase = true
   autostash = true
 [push]
 	default = current
   followTags = true
 [rebase]
+	autoStash = true
   # autoSquash = true
 [rerere]
   autoupdate = true
@@ -77,3 +78,5 @@
   submoduleSummary = true
 [tag]
   sort = version:refname
+[init]
+	defaultBranch = main
