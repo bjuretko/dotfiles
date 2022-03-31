@@ -1,15 +1,13 @@
 tap "aquasecurity/trivy"
 tap "azure/kubelogin"
 tap "buo/cask-upgrade"
-tap "caskroom/cask"
-tap "caskroom/versions"
 tap "heroku/brew"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-drivers"
 tap "homebrew/cask-fonts"
 tap "homebrew/core"
-
+tap "homebrew/cask-versions"
 
 # CLI tool for Alexa Skill Kit
 brew "ask-cli"
@@ -145,7 +143,6 @@ cask "font-hasklig"
 cask "font-meslo-for-powerline"
 cask "font-monoid"
 cask "font-powerline-symbols"
-cask "font-source-code-pro-for-powerline"
 # GIT client
 cask "fork"
 # Free and open-source image editor
@@ -199,7 +196,6 @@ cask "prisma-studio"
 cask "qlimagesize"
 # QuickLook generator for Markdown files
 cask "qlmarkdown"
-cask "qlvideo"
 cask "quicklookase"
 # Scans, detects, and monitors keyboard taps
 # cask "reikey"
@@ -227,7 +223,6 @@ mas "1Password 7", id: 1333542190
 mas "Amphetamine", id: 937984704
 mas "CoffeeCup", id: 1415866782
 mas "Developer", id: 640199958
-mas "Free Ruler", id: 1483172210
 # mas "Irvue", id: 1039633667
 mas "Playgrounds", id: 1496833156
 mas "Skitch", id: 425955336
