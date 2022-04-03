@@ -6,3 +6,4 @@
 .profile
 .stCommitMsg
 .config/starship.toml
+.config/fish
