@@ -26,10 +26,18 @@ Shortcut for initial setup:
 4. 🔗 Symlink dotfiles with
 
    ```sh
-   xargs -I {} ln -sfv "$(pwd)/{}" ~/{} < dotfiles.ls
+   xargs -I {} ln -sfv "$(pwd)/~/{}" ~/{} < dotfiles.ls
    ```
 
    > TODO: reorganize repository for use with [GNU Stow](https://www.gnu.org/software/stow/manual/stow.html).
+
+5. Make bash the default shell
+
+   ```sh
+   sudo sh -c 'echo /opt/homebrew/bin/bash >> /etc/shells'
+   sudo sh -c 'echo /opt/homebrew/bin/fish >> /etc/shells'
+   chsh -s /opt/homebrew/bin/bash
+   ```
 
 ## Update homebrew package lists
 
@@ -45,5 +53,5 @@ You can cleanup other dependencies which are not in Brewfile with `brew bundle c
 
 Installation of native Mac Apps can be automated with [MacAppStore](http://macappstore.org/). The mas installed apps are included in the Brewfile as well.
 
-Get a list of installed apps with `mas list`. 
+Get a list of installed apps with `mas list`.
 To manage apps with `mas` you need to signin with `mas signin`.
