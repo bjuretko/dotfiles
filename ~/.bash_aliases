@@ -1,4 +1,9 @@
-#!/usr/bin/env bash
+# shellcheck disable=SC2148,SC1091
+# ~/.bash_aliases
+
+# Alias defintions and helper functions for bash5
+
+[ "$DEBUG" ] && echo . "$HOME/.bash_aliases"
 
 # Docker aliases
 

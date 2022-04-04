@@ -1,9 +1,11 @@
 .bash_aliases
 .bash_completion
 .bashrc
+.bash_profile
+.profile
+.zprofile
 .gitconfig
 .gitignore_global
-.profile
 .stCommitMsg
 .config/starship.toml
 .config/fish

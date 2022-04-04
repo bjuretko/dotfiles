@@ -1,13 +1,13 @@
-[ "$DEBUG" ] && echo "sourcing ~/.bash_completion"
+# shellcheck disable=SC2148,SC1091
+# ~/.bash_completion
 
-## Bash-Completions
-for completion_file in $(brew --prefix)/etc/bash_completion.d/*; do
-  [ "$DEBUG" ] && echo "sourcing $completion_file..."
-  source "$completion_file"
-done
+# Sourcing some bash auto-completions for interactive shells
+
+[ "$DEBUG" ] && echo . "$HOME/.bash_completion"
 
 
-[ "$DEBUG" ] && echo "Sourcing docker completions ..."
+
+[ "$DEBUG" ] && echo "  docker completions..."
 # https://docs.docker.com/docker-for-mac/#install-shell-completion
 if ! shopt -oq posix; then
   [ -f /Applications/Docker.app/Contents/Resources/etc/docker.bash-completion ] && . /Applications/Docker.app/Contents/Resources/etc/docker.bash-completion
@@ -15,9 +15,7 @@ if ! shopt -oq posix; then
   [ -f /Applications/Docker.app/Contents/Resources/etc/docker-compose.bash-completion ] && . /Applications/Docker.app/Contents/Resources/etc/docker-compose.bash-completion
 fi
 
-
-## Python env
-[ "$DEBUG" ] && echo "Sourcing python completions ..."
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
-eval "$(pipenv --completion)"
+[ "$DEBUG" ] && echo "  python related completions..."
+eval "$( pip3 completion --bash )"
+eval "$( register-python-argcomplete pipx )"
+eval "$(_PIPENV_COMPLETE=bash_source pipenv)"
