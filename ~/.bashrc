@@ -41,3 +41,6 @@ eval "$(starship init bash)"
 [ "$DEBUG" ] && echo "  pyenv init..."
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
+
+export HOMEBREW_NO_INSTALLED_DEPENDENTS_CHECK=1
+export HOMEBREW_NO_ENV_HINTS=1
