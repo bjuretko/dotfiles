@@ -20,6 +20,8 @@ alias dclogs="docker compose logs"
 alias ip="dig TXT +short o-o.myaddr.l.google.com @ns1.google.com"
 alias dns="dig +nocmd any +multiline +noall +answer"
 
+# MacOS stuff
+alias runningrosettas="ps -p \$(fuser /usr/libexec/rosetta/runtime | sed -e 's/.*: //' | sed -e 's/ /,/g')"
 alias bat="pmset -g batt"
 
 # Filesystem
