@@ -6,13 +6,15 @@
 [ "$DEBUG" ] && echo . "$HOME/.bash_completion"
 
 
-
-[ "$DEBUG" ] && echo "  docker completions..."
-# https://docs.docker.com/docker-for-mac/#install-shell-completion
-if ! shopt -oq posix; then
-  [ -f /Applications/Docker.app/Contents/Resources/etc/docker.bash-completion ] && . /Applications/Docker.app/Contents/Resources/etc/docker.bash-completion
-  [ -f /Applications/Docker.app/Contents/Resources/etc/docker-machine.bash-completion ] && . /Applications/Docker.app/Contents/Resources/etc/docker-machine.bash-completion
-  [ -f /Applications/Docker.app/Contents/Resources/etc/docker-compose.bash-completion ] && . /Applications/Docker.app/Contents/Resources/etc/docker-compose.bash-completion
+if [ -d /Applications/Docker.app/Contents/Resources/etc ]
+then
+  [ "$DEBUG" ] && echo "  docker completions..."
+  # https://docs.docker.com/docker-for-mac/#install-shell-completion
+  if ! shopt -oq posix; then
+    [ -f /Applications/Docker.app/Contents/Resources/etc/docker.bash-completion ] && . /Applications/Docker.app/Contents/Resources/etc/docker.bash-completion
+    [ -f /Applications/Docker.app/Contents/Resources/etc/docker-machine.bash-completion ] && . /Applications/Docker.app/Contents/Resources/etc/docker-machine.bash-completion
+    [ -f /Applications/Docker.app/Contents/Resources/etc/docker-compose.bash-completion ] && . /Applications/Docker.app/Contents/Resources/etc/docker-compose.bash-completion
+  fi
 fi
 
 [ "$DEBUG" ] && echo "  python related completions..."
