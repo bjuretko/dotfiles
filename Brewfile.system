@@ -1,0 +1,82 @@
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/cask-drivers"
+tap "homebrew/cask-fonts"
+tap "homebrew/core"
+tap "homebrew/cask-versions"
+
+# Bourne-Again SHell, a UNIX command interpreter
+brew "bash"
+# Programmable completion for Bash 4.2+
+brew "bash-completion@2"
+# GNU File, Shell, and Text utilities
+brew "coreutils"
+# Get a file from an HTTP, HTTPS or FTP server
+brew "curl"
+# Distributed revision control system
+brew "git"
+# Git extension for versioning large files
+brew "git-lfs"
+# Tools and libraries to manipulate images in many formats
+brew "imagemagick"
+# Lightweight and flexible command-line JSON processor
+brew "jq"
+# Mac App Store command-line interface
+brew "mas"
+# Intercept, modify, replay, save HTTP/S traffic
+brew "mitmproxy"
+# Port scanning utility for large networks
+brew "nmap"
+# OpenBSD freely-licensed SSH connectivity tools
+brew "openssh"
+# 7-Zip (high compression file archiver) implementation
+brew "p7zip"
+# Static analysis and lint tool, for (ba)sh scripts
+brew "shellcheck"
+# SOcket CAT: netcat on steroids
+brew "socat"
+# Cross-shell prompt for astronauts
+brew "starship"
+# Organize software neatly under a single directory tree (e.g. /usr/local)
+brew "stow"
+# Manipulate and query tags on macOS files
+brew "tag"
+# Display directories as trees (with optional color/HTML output)
+brew "tree"
+# Sends magic packets to wake up network-devices
+brew "wakeonlan"
+# Internet file retriever
+brew "wget"
+# Tool to get information about and install available Xcode versions
+brew "xcinfo"
+# Apple TV Aerial screensaver
+cask "aerial"
+# Monospaced font that includes programming ligatures
+cask "font-cascadia-code"
+cask "font-fira-code"
+cask "font-hack"
+cask "font-hack-nerd-font"
+# Code font with monospaced ligatures
+cask "font-hasklig"
+cask "font-meslo-for-powerline"
+cask "font-monoid"
+cask "font-powerline-symbols"
+# Utility to hide menu bar items
+cask "hiddenbar"
+# Terminal emulator as alternative to Apple's Terminal app
+cask "iterm2"
+# Menu bar calendar
+cask "itsycal"
+# Move and resize windows with ease
+cask "spectacle"
+# System monitor for the menu bar
+cask "stats"
+# General-purpose text editor
+cask "textmate"
+# Open-source code editor
+cask "visual-studio-code"
+# Multimedia player
+cask "vlc"
+mas "Amphetamine", id: 937984704
+mas "Skitch", id: 425955336
+mas "The Unarchiver", id: 425424353

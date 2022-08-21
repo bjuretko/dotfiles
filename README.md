@@ -18,7 +18,7 @@ Shortcut for initial setup:
 3. Install applications ...
 
    ```sh
-   brew bundle
+   brew bundle --file Brewfile.system 
    ```
 
    This will install  and common used packages.
