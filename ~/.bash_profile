@@ -6,7 +6,7 @@
 # Run DEBUG=1 bash -l to create a new login shell with debugging
 # output to see sourcing behaviour
 
-# export DEBUG=1
+export DEBUG=1
 [ "$DEBUG" ] && echo "BASH_VERSION: $BASH_VERSION $SHELL"
 
 # When a .bash_profile is existing, bash does not source .profile

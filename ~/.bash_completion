@@ -16,6 +16,6 @@ if ! shopt -oq posix; then
 fi
 
 [ "$DEBUG" ] && echo "  python related completions..."
-eval "$( pip3 completion --bash )"
-eval "$( register-python-argcomplete pipx )"
-eval "$(_PIPENV_COMPLETE=bash_source pipenv)"
+which pip3 >/dev/null && eval "$( pip3 completion --bash )"
+which pipx >/dev/null && eval "$( register-python-argcomplete pipx )"
+which pipenv >/dev/null && eval "$(_PIPENV_COMPLETE=bash_source pipenv)"
