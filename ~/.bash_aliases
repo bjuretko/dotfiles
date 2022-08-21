@@ -7,7 +7,7 @@
 
 # Docker aliases
 
-alias docker="nerdctl"
+#   alias docker="nerdctl"
 
 alias dm="docker-machine"
 alias dc="docker compose"
@@ -17,7 +17,7 @@ alias dstop="docker ps -q | xargs -I {} docker stop {}"
 alias dclogs="docker compose logs"
 
 # Network
-alias ip="dig myip.opendns.com A myip.opendns.com AAAA +short @resolver1.opendns.com"
+alias ip="dig TXT +short o-o.myaddr.l.google.com @ns1.google.com"
 alias dns="dig +nocmd any +multiline +noall +answer"
 
 alias bat="pmset -g batt"
