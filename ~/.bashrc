@@ -40,9 +40,10 @@ eval "$(starship init bash)"
 ## see https://docs.brew.sh/Homebrew-and-Python
 if which pyenv >/dev/null
 then
-  [ "$DEBUG" -a ] && echo "  pyenv init..."
+  [ "$DEBUG" ] && echo "  pyenv init..."
   eval "$(pyenv init -)"
   eval "$(pyenv virtualenv-init -)"
 fi
+
 export HOMEBREW_NO_INSTALLED_DEPENDENTS_CHECK=1
 export HOMEBREW_NO_ENV_HINTS=1
