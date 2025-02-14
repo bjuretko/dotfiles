@@ -55,3 +55,12 @@ Installation of native Mac Apps can be automated with [MacAppStore](http://macap
 
 Get a list of installed apps with `mas list`.
 To manage apps with `mas` you need to signin with `mas signin`.
+
+## Other
+
+Always show hidden files in Finder:
+
+```
+defaults write com.apple.finder AppleShowAllFiles true
+killall Finder
+```
