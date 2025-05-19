@@ -13,7 +13,9 @@
 [ "$DEBUG" ] && echo . "$HOME/.profile"
 
 #umask 022
-export LC_ALL=C
+#export LC_ALL=C
+export LC_ALL="en_US.UTF-8"
+export LANG="de_DE.UTF-8"
 
 # exten
 eval "$(/opt/homebrew/bin/brew shellenv)"
