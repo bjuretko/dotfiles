@@ -33,9 +33,10 @@ export PATH="$PATH:$HOME/.cargo/bin"
 export NVM_DIR="$HOME/.nvm"
 [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
 [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+[ -s "./.nvmrc" ] && nvm use
 
 # local binaries
-export PATH="$HOME/.local/bin:/opt/homebrew/opt/curl/bin:$PATH"
+export PATH="$HOME/.local/bin:/opt/homebrew/opt/curl/bin:$PATH:/opt/homebrew/bin"
 
 # If not running interactively, don't do anything
 case $- in
