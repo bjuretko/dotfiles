@@ -32,12 +32,17 @@ port() {
 
 # MacOS stuff
 
-# number of open files
-alias nof="lsof | awk '{print $1}' | sort | uniq -c | sort -rn | head"
 # top process consuming nofs
-alias tof="ps -p $(lsof  |  awk '{print $2}' | sort | uniq -c | sort -rn | head -n 1 | awk '{print $2}') -o comm="
+tof() {
+  ps -p "$(lsof | awk '{print $2}' | sort | uniq -c | sort -rn | head -n 1 | awk '{print $2}')" -o comm=
+}
+# number of open files
+nof() {
+  lsof | awk '{print $1}' | sort | uniq -c | sort -rn | head
+}
 # increas nofs
 alias doublemaxfiles="(sysctl -w kern.maxfiles=150000; sysctl -w kern.maxfilesperproc=100000)"
+
 
 
 alias runningrosettas="ps -p \$(fuser /usr/libexec/rosetta/runtime | sed -e 's/.*: //' | sed -e 's/ /,/g')"

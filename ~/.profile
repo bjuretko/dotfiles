@@ -12,7 +12,7 @@
 
 [ "$DEBUG" ] && echo . "$HOME/.profile"
 
-#umask 022
+umask 0077
 #export LC_ALL=C
 export LC_ALL="en_US.UTF-8"
 export LANG="de_DE.UTF-8"
